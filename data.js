@@ -48,7 +48,7 @@ const portfolioData = {
 
   socialLinks: {
     github: "https://github.com/nikhil146-byte",
-    linkedin: "https://linkedin.com/in/nikhil-kushwah01/",
+    linkedin: "https://www.linkedin.com/in/nikhilkushwah01/",
     email: "kushwahnikhil146@gmail.com"
   },
 
