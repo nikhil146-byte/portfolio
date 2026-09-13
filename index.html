@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nikhil Kushwah — Software Developer &amp; Data/AI Enthusiast</title>
+<meta name="description" content="Portfolio of Nikhil Kushwah, Computer Science student specializing in software development, data structures, data science and machine learning." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ BACKGROUND LAYERS ============ -->
+<div class="bg-grid" aria-hidden="true"></div>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__logo">Nikhil<span>.</span>Kushwah</a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link" data-section="home">Home</a>
+      <a href="#about" class="nav-link" data-section="about">About</a>
+      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#training" class="nav-link" data-section="training">Training</a>
+      <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
+      <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+      <a href="#education" class="nav-link" data-section="education">Education</a>
+      <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--connect">Let's Connect</a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" class="mobile-link" data-section="home">Home</a>
+  <a href="#about" class="mobile-link" data-section="about">About</a>
+  <a href="#skills" class="mobile-link" data-section="skills">Skills</a>
+  <a href="#projects" class="mobile-link" data-section="projects">Projects</a>
+  <a href="#training" class="mobile-link" data-section="training">Training</a>
+  <a href="#certificates" class="mobile-link" data-section="certificates">Certificates</a>
+  <a href="#achievements" class="mobile-link" data-section="achievements">Achievements</a>
+  <a href="#education" class="mobile-link" data-section="education">Education</a>
+  <a href="#contact" class="mobile-link" data-section="contact">Contact</a>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero__inner">
+    <div class="hero__text">
+      <p class="hero__kicker">Computer Science Student</p>
+      <h1 class="hero__heading">Hi, I'm <span class="gradient-text">Nikhil Kushwah</span></h1>
+      <p class="hero__subtitle">Computer Science Student · Software Developer · Data &amp; AI Enthusiast</p>
+      <p class="hero__typing"><span id="typingText"></span><span class="cursor-blink">|</span></p>
+      <p class="hero__desc">Computer Science and Engineering student passionate about Data Structures, Software Development, Data Science, Machine Learning, and building interactive real-world applications.</p>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#" id="resumeBtnHero" class="btn btn--ghost">Download Resume</a>
+        <a href="#contact" class="btn btn--text">Let's Connect →</a>
+      </div>
+
+      <div class="hero__socials" id="heroSocials"></div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="terminal glass">
+        <div class="terminal__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="terminal__title">nikhil@dev-machine ~ zsh</span>
+        </div>
+        <div class="terminal__body" id="terminalBody"></div>
+      </div>
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span></span></div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="section__head">
+    <h2 class="section__title">About Me</h2>
+    <p class="section__sub">The short version of who I am and what I'm building toward.</p>
+  </div>
+
+  <div class="about__grid">
+    <div class="about__copy glass">
+      <p>I am a Computer Science and Engineering student at Lovely Professional University, focused on strengthening my programming, problem-solving, data analysis, and software development skills.</p>
+      <p>My current interests sit across:</p>
+      <ul class="about__interests" id="aboutInterests"></ul>
+    </div>
+
+    <div class="about__stats" id="aboutStats"></div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Technical Skills</h2>
+    <p class="section__sub">A live dashboard of the tools and concepts I work with.</p>
+  </div>
+
+  <div class="filter-bar" id="skillFilters"></div>
+  <div class="skills-grid" id="skillsGrid"></div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Featured Projects</h2>
+    <p class="section__sub">Selected builds — from data structures to data dashboards.</p>
+  </div>
+
+  <div class="filter-bar" id="projectFilters"></div>
+  <div class="projects-grid" id="projectsGrid"></div>
+</section>
+
+<!-- ============ TRAINING ============ -->
+<section id="training" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Training</h2>
+    <p class="section__sub">Structured programs that sharpened my fundamentals.</p>
+  </div>
+  <div id="trainingContainer"></div>
+</section>
+
+<!-- ============ CERTIFICATES ============ -->
+<section id="certificates" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Certificates</h2>
+    <p class="section__sub">Verified learning, organized by track.</p>
+  </div>
+
+  <div class="filter-bar" id="certFilters"></div>
+  <div class="cert-grid" id="certGrid"></div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section id="achievements" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Achievements</h2>
+    <p class="section__sub">Milestones along the way.</p>
+  </div>
+  <div id="achievementsContainer"></div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Education</h2>
+    <p class="section__sub">My academic path so far.</p>
+  </div>
+  <div class="timeline" id="educationTimeline"></div>
+</section>
+
+<!-- ============ DEVELOPER DASHBOARD ============ -->
+<section id="dashboard" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Developer Dashboard</h2>
+    <p class="section__sub">Where to find my work and how I spend my time.</p>
+  </div>
+  <div class="dash-grid" id="dashGrid"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section">
+  <div class="section__head">
+    <h2 class="section__title">Let's Build Something Together</h2>
+    <p class="section__sub">I'm always interested in learning, building projects, and connecting with people in technology.</p>
+  </div>
+
+  <div class="contact__grid">
+    <div class="contact__info glass" id="contactInfo"></div>
+
+    <form class="contact__form glass" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        <span class="form-error" id="err-name"></span>
+      </div>
+      <div class="form-row">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" placeholder="you@example.com" required />
+        <span class="form-error" id="err-email"></span>
+      </div>
+      <div class="form-row">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" rows="5" placeholder="Tell me a bit about what you'd like to build or discuss" required></textarea>
+        <span class="form-error" id="err-message"></span>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+      <p class="form-status" id="formStatus" role="status"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <p class="footer__name">Nikhil Kushwah</p>
+      <p class="footer__tagline">Building. Learning. Solving.</p>
+    </div>
+    <div class="footer__links" id="footerLinks"></div>
+  </div>
+  <p class="footer__copy">© 2026 Nikhil Kushwah. All rights reserved.</p>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+<!-- ============ DATA LAYER ============ -->
+<!-- All editable content lives in js/data.js — edit that file only. -->
+<script src="js/data.js"></script>
+<!-- ============ UI / RENDER LOGIC ============ -->
+<script src="js/main.js"></script>
+</body>
+</html>
